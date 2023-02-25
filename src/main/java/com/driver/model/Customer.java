@@ -32,11 +32,11 @@ public class Customer {
         this.password = password;
     }
 
-    public int getId() {
+    public int getCustomerId(){
         return customerId;
     }
 
-    public void setId(int customerId) {
+    public void setCustomerId(int customerId) {
         this.customerId = customerId;
     }
 
