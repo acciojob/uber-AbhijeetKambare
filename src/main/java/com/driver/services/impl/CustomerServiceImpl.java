@@ -42,7 +42,7 @@ public class CustomerServiceImpl implements CustomerService {
 			if(tripBooking.getStatus()==TripStatus.CONFIRMED)
 				tripBooking.setStatus(TripStatus.CANCELED);
 		}
-		customerRepository2.deleteById(customerId);
+		customerRepository2.delete(customer);
 	}
 
 	@Override
