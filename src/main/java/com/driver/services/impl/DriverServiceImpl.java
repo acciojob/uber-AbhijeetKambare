@@ -40,8 +40,8 @@ public class DriverServiceImpl implements DriverService {
 		Driver driver=driverRepository3.findById(driverId).get();
 		List<TripBooking> bookings=driver.getTripBookingList();
 		for(TripBooking tripBooking:bookings){
-			if(tripBooking.getTripStatus()== TripStatus.CONFIRMED){
-				tripBooking.setTripStatus(TripStatus.CANCELED);
+			if(tripBooking.getStatus()== TripStatus.CONFIRMED){
+				tripBooking.setStatus(TripStatus.CANCELED);
 			}
 		}
 		driverRepository3.delete(driver);

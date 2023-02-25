@@ -26,8 +26,8 @@ public class Customer {
     public Customer() {
     }
 
-    public Customer(int id, String mobile, String password) {
-        this.customerId = id;
+    public Customer(int customerId, String mobile, String password) {
+        this.customerId = customerId;
         this.mobile = mobile;
         this.password = password;
     }
@@ -36,8 +36,8 @@ public class Customer {
         return customerId;
     }
 
-    public void setId(int id) {
-        this.customerId = id;
+    public void setId(int customerId) {
+        this.customerId = customerId;
     }
 
     public String getMobile() {
