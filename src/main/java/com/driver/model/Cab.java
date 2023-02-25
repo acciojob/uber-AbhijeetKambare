@@ -1,15 +1,13 @@
 package com.driver.model;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 @Table(name="cab")
 public class Cab {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int cabId;
+    private int id;
     private int perKmRate;
     private boolean available;
     @OneToOne(mappedBy = "cab",cascade = CascadeType.ALL)
@@ -27,17 +25,17 @@ public class Cab {
     }
 
     public Cab(int id, int perKmRate, boolean available) {
-        this.cabId = id;
+        this.id = id;
         this.perKmRate = perKmRate;
         this.available = available;
     }
 
-    public int getCabId() {
-        return cabId;
+    public int getId() {
+        return id;
     }
 
-    public void setCabId(int cabId) {
-        this.cabId = cabId;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getPerKmRate() {
@@ -48,7 +46,7 @@ public class Cab {
         this.perKmRate = perKmRate;
     }
 
-    public boolean isAvailable() {
+    public boolean getAvailable() {
         return available;
     }
 
